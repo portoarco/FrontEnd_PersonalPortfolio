@@ -36,7 +36,7 @@ export default function Home() {
             className="lg:hidden w-full"
           /> */}
           <Image
-            src="/assets/bannerarco-webp.webp"
+            src="/assets/bannerarco.svg"
             width={100}
             height={50}
             className="lg:hidden w-full"
@@ -66,7 +66,7 @@ export default function Home() {
         {/* PHOTO BANNER */}
         <div id="banner-photo" className="">
           <Image
-            src="/assets/bannerarco-webp.webp"
+            src="/assets/bannerarco.svg"
             alt="banner photo"
             width={100}
             height={50}

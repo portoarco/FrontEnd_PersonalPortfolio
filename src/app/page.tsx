@@ -6,6 +6,7 @@ import Testicard from "@/components/Testicard";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import AccordionNavbar from "@/components/Accordion-navbar";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -29,11 +30,18 @@ export default function Home() {
           <p className=" text-3xl text-justify mb-4 max-lg:text-center mt-10 max-lg:text-3xl font-sans font-extrabold">
             Hello, I am <span className="text-blue-600 font-bold">Arco</span> 👋
           </p>
-          <img
+          {/* <img
             src="/assets/bannerarco.svg"
             alt="foto-lg"
             className="lg:hidden w-full"
-          />
+          /> */}
+          <Image
+            src="/assets/bannerarco.svg"
+            width={100}
+            height={50}
+            className="lg:hidden w-full"
+            alt="banner"
+          ></Image>
 
           <p className="font-bold text-7xl max-lg:text-center  max-lg:mt-10">
             {" "}
@@ -57,11 +65,13 @@ export default function Home() {
 
         {/* PHOTO BANNER */}
         <div id="banner-photo" className="">
-          <img
+          <Image
             src="/assets/bannerarco.svg"
-            alt=""
-            className="w-2xl max-lg:hidden 2xl:w-5xl "
-          />
+            alt="banner photo"
+            width={100}
+            height={50}
+            className="w-2xl max-lg:hidden 2xl:w-5xl"
+          ></Image>
         </div>
       </section>
 
@@ -110,7 +120,14 @@ export default function Home() {
         className="flex justify-center gap-x-15 gap-y-10  items-center pt-15 max-lg:flex max-lg:flex-col max-lg:p-8 p-18  "
       >
         <div id="photo-profile" className="max-lg:mt-30 max-sm:mt-20">
-          <img src="/assets/aboutme.png" alt="" className=" max-lg:w-full " />
+          {/* <img src="/assets/aboutme.png" alt="" className=" max-lg:w-full " /> */}
+          <Image
+            src="/assets/aboutme.png"
+            alt="banner"
+            width={100}
+            height={50}
+            className="max-lg:w-full"
+          ></Image>
         </div>
         <div id="about-me-story" className="w-[1100px] max-lg:w-full">
           <p className="font-semibold text-2xl max-lg:hidden">About</p>

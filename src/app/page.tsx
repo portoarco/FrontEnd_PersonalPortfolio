@@ -36,7 +36,7 @@ export default function Home() {
             className="lg:hidden w-full"
           /> */}
           <Image
-            src="/assets/bannerarco.svg"
+            src="/assets/bannerarco-webp.webp"
             width={100}
             height={50}
             className="lg:hidden w-full"
@@ -66,7 +66,7 @@ export default function Home() {
         {/* PHOTO BANNER */}
         <div id="banner-photo" className="">
           <Image
-            src="/assets/bannerarco.svg"
+            src="/assets/bannerarco-webp.webp"
             alt="banner photo"
             width={100}
             height={50}
@@ -188,7 +188,7 @@ export default function Home() {
           >
             <li className="p-5 rounded-md bg-[#F5FCFF] shadow-md shadow-[#6183ff] ">
               <Cardlist
-                iconUrl="/assets/service1.png"
+                iconUrl="/assets/service1.webp"
                 title="Ahuse"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
               ></Cardlist>
@@ -196,7 +196,7 @@ export default function Home() {
             </li>
             <li className="p-5 rounded-md bg-[#F5FCFF] shadow-md shadow-[#6183ff] ">
               <Cardlist
-                iconUrl="/assets/service2.png"
+                iconUrl="/assets/service2.webp"
                 title="App Dashboard"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
               ></Cardlist>
@@ -204,7 +204,7 @@ export default function Home() {
             </li>
             <li className="p-5 rounded-md bg-[#F5FCFF] shadow-md shadow-[#6183ff] ">
               <Cardlist
-                iconUrl="/assets/service3.png"
+                iconUrl="/assets/service3.webp"
                 title="Easy Rent"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
               ></Cardlist>

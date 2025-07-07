@@ -33,7 +33,7 @@ export default function Home() {
           </p>
 
           <Image
-            src="/bannerarco.svg"
+            src="/bannerarco-webp.webp"
             width={100}
             height={50}
             className="lg:hidden w-full"

@@ -14,10 +14,10 @@ function AccordionNavbar() {
     <>
       <nav
         id="accordion-navbar"
-        className="lg:hidden fixed px-10 py-4 bg-white rounded-xl mt-4 w-[90vw] shadow-xl flex justify-between items-center align-middle"
+        className="lg:hidden fixed px-10 py-4 bg-white rounded-xl mt-4 w-[90vw] shadow-xl flex justify-between items-center align-middle  z-30"
       >
         <div id="navbar-logo" className="">
-          <img src="/assets/logo.png" alt="logo" className="w-30" />
+          <img src="/logo.png" alt="logo" className="w-30" />
         </div>
 
         <div className="">

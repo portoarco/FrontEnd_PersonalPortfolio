@@ -1,12 +1,13 @@
-import Button from "@/components/Button";
-import Cardlist from "@/components/Cardlist";
-import Contactbtn from "@/components/Contactbutton";
-import Portobutton from "@/components/Portfoliobutton";
-import Testicard from "@/components/Testicard";
+import Button from "@/components/ui/Button";
+import Cardlist from "@/components/ui/Cardlist";
+import Contactbtn from "@/components/ui/Contactbutton";
+import Portobutton from "@/components/ui/Portfoliobutton";
+import Testicard from "@/components/ui/Testicard";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import AccordionNavbar from "@/components/Accordion-navbar";
+import Navbar from "@/components/ui/Navbar";
+import AccordionNavbar from "@/components/ui/Accordion-navbar";
 import Image from "next/image";
+import ExpertiseCard from "./components/ExpertiseCard";
 
 export default function Home() {
   return (
@@ -30,13 +31,9 @@ export default function Home() {
           <p className=" text-3xl text-justify mb-4 max-lg:text-center mt-10 max-lg:text-3xl font-sans font-extrabold">
             Hello, I am <span className="text-blue-600 font-bold">Arco</span> 👋
           </p>
-          {/* <img
-            src="/assets/bannerarco.svg"
-            alt="foto-lg"
-            className="lg:hidden w-full"
-          /> */}
+
           <Image
-            src="/assets/bannerarco.svg"
+            src="/bannerarco.svg"
             width={100}
             height={50}
             className="lg:hidden w-full"
@@ -48,10 +45,14 @@ export default function Home() {
             <span className="text-[#5E3BEE]">Full Stack</span> Web Developer
           </p>
           <p className="font-normal text-xl mt-[21px] text-justify max-lg:text-center max-lg:mt-10">
-            I build fast, responsive fullstack web applications using React,
-            Next.js, Tailwind CSS, and MySQL. I bring a unique perspective,
-            strong fundamentals, and a passion for solving real-world problems
-            through code.
+            I specialize in building scalable and high-performance web
+            applications using modern front-end technologies such as React.js,
+            Next.js, and Tailwind CSS. My goal is to create seamless,
+            responsive, and user-friendly digital experiences that help
+            businesses grow and engage their audiences effectively. With a solid
+            understanding of both front-end and basic backend development, I
+            deliver complete solutions tailored to meet your specific needs and
+            ensure optimal performance across all devices.
           </p>
 
           {/* Get in Touch Btn */}
@@ -66,7 +67,7 @@ export default function Home() {
         {/* PHOTO BANNER */}
         <div id="banner-photo" className="">
           <Image
-            src="/assets/bannerarco.svg"
+            src="/bannerarco.svg"
             alt="banner photo"
             width={100}
             height={50}
@@ -84,8 +85,10 @@ export default function Home() {
           </p>
         </div>
 
-        <div id="exp-list" className="mt-[50px] items-center">
-          <ul
+        <div id="exp-list" className="mt-[50px] items-center flex max-sm:flex-col justify-center gap-x-10">
+          <ExpertiseCard></ExpertiseCard>
+
+          {/* <ul
             id="exp-list-detail"
             className="grid grid-cols-4 gap-x-5 max-lg:flex flex-col gap-y-15"
           >
@@ -110,7 +113,7 @@ export default function Home() {
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
               ></Cardlist>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </section>
 
@@ -119,14 +122,14 @@ export default function Home() {
         id="about-me"
         className="flex justify-center gap-x-15 gap-y-10  items-center pt-15 max-lg:flex max-lg:flex-col max-lg:p-8 p-18  "
       >
-        <div id="photo-profile" className="max-lg:mt-30 max-sm:mt-20">
-          {/* <img src="/assets/aboutme.png" alt="" className=" max-lg:w-full " /> */}
+        <div id="photo-profile" className="w-100 relative h-100  ">
           <Image
-            src="/assets/aboutme.png"
+            src="/photo.webp"
             alt="banner"
-            width={100}
-            height={50}
-            className="max-lg:w-full"
+            // width={100}
+            // height={50}
+            fill
+            className="object-cover"
           ></Image>
         </div>
         <div id="about-me-story" className="w-[1100px] max-lg:w-full">
@@ -134,25 +137,27 @@ export default function Home() {
           <p className="font-bold text-4xl mt-[20px] max-lg:mt-0 max-lg:text-center ">
             About Me
           </p>
-          <p className="mt-[25px] text-justify select-none">
+          <p className="mt-[25px] text-justify select-none md:text-xl">
             {" "}
-            I am a Fullstack Web Developer with a non-IT background who
-            transitioned into tech out of a deep interest in software
-            development. After completing several training programs and courses,
-            I found that working in IT truly aligns with my passion and way of
-            thinking. Through consistency and dedication, I’ve built a solid
-            understanding of core programming principles and applied them
-            directly in real-world projects.
+            I am a front-end developer focused on creating attractive,
+            responsive, and user-friendly web interfaces. I have experience
+            working with HTML, CSS, JavaScript, TypeScript, React.js, and
+            Next.js to build web applications that are not only visually
+            appealing but also fast and accessible to a wide range of users.
+            Additionally, I have a basic understanding of backend development
+            using MySQL as a database and am familiar with frameworks like
+            Express.js to support server-side programming.
           </p>
-          <p className="mt-[15px] text-justify select-none">
-            I have strong fundamentals in both logic and data structures. On the
-            front end, I work with React, Next.js, and Tailwind CSS to create
-            responsive, user-friendly interfaces. On the back end, I am
-            experienced with MySQL, user authentication and authorization, and
-            API integration. I also understand the basics of deploying
-            applications using modern platforms. In every development process, I
-            value continuous learning, clear communication, and staying
-            persistent when solving challenges{" "}
+          <p className="mt-[15px] text-justify select-none md:text-xl">
+            My core skills include proficiency in front-end languages and
+            frameworks such as React.js and Next.js, along with Tailwind CSS for
+            efficient styling. On the backend, I have foundational knowledge of
+            MySQL and Express.js. I prioritize delivering work on time with
+            great attention to detail to ensure high-quality results. Clear and
+            effective communication is important to me to maintain smooth
+            collaboration within teams. I am also committed to continuous
+            learning and improving my skills to provide the best solutions
+            possible.{" "}
           </p>
         </div>
       </section>
@@ -174,7 +179,7 @@ export default function Home() {
             <Link href="https://github.com/portoarco?tab=repositories">
               <Button
                 title="Visit My GitHub"
-                iconUrl="/assets/github.png"
+                iconUrl="/github.png"
                 className="cursor-pointer border bg-[#E62872] rounded-lg text-white p-3"
               ></Button>
             </Link>
@@ -188,27 +193,29 @@ export default function Home() {
           >
             <li className="p-5 rounded-md bg-[#F5FCFF] shadow-md shadow-[#6183ff] ">
               <Cardlist
-                iconUrl="/assets/service1.webp"
-                title="Ahuse"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
+                iconUrl="/porto1.png"
+                title="Website Redesign Project"
+                description="I redesigned the front-end of a logistics website using React, Tailwind CSS, and ShadCN UI to create a clean, responsive, and scalable interface. Key components like service cards, contact sections, and navigation menus were rebuilt to improve usability, mobile experience, and visual clarity across devices.
+
+"
               ></Cardlist>
-              <Portobutton href="#"></Portobutton>
+              <Portobutton href="https://front-end-redesign-project.vercel.app/"></Portobutton>
             </li>
             <li className="p-5 rounded-md bg-[#F5FCFF] shadow-md shadow-[#6183ff] ">
               <Cardlist
-                iconUrl="/assets/service2.webp"
-                title="App Dashboard"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
+                iconUrl="/porto2.png"
+                title="Blog Website Application"
+                description="This blog application was developed with React and Redux Toolkit to manage articles dynamically. It features a validated submission form, category-based filtering, and an admin dashboard. The layout is fully responsive, styled with Tailwind CSS and ShadCN UI components."
               ></Cardlist>
-              <Portobutton href="#"></Portobutton>
+              <Portobutton href="https://front-end-blog-app-steel.vercel.app/"></Portobutton>
             </li>
             <li className="p-5 rounded-md bg-[#F5FCFF] shadow-md shadow-[#6183ff] ">
               <Cardlist
-                iconUrl="/assets/service3.webp"
-                title="Easy Rent"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At asperiores exercitationem sit temporibus eius deleniti nam eveniet doloremque esse rerum!"
+                iconUrl="/porto3.png"
+                title="Personal Portfolio Website"
+                description="Built with React, Tailwind CSS, and Framer Motion, this one-page portfolio showcases my profile, skills, and projects with smooth animations and responsive design. It integrates EmailJS for direct messaging, providing a clean and interactive personal web presence"
               ></Cardlist>
-              <Portobutton href="#"></Portobutton>
+              <Portobutton href="https://front-end-personal-portfolio.vercel.app/"></Portobutton>
             </li>
           </ul>
         </div>
@@ -233,7 +240,7 @@ export default function Home() {
                 description='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet quasi a saepe nulla dolore assumenda similique reiciendis molestias quidem."'
                 name="Dianne Russel"
                 company="Starbucks"
-                iconURL="/assets/client1.png"
+                iconURL="/client1.png"
               ></Testicard>
             </li>
             <li>
@@ -241,7 +248,7 @@ export default function Home() {
                 description='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet quasi a saepe nulla dolore assumenda similique reiciendis molestias quidem."'
                 name="Kristin Watson"
                 company="Louis Vuitton"
-                iconURL="/assets/client2.png"
+                iconURL="/client2.png"
               ></Testicard>
             </li>
             <li>
@@ -249,7 +256,7 @@ export default function Home() {
                 description='"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet quasi a saepe nulla dolore assumenda similique reiciendis molestias quidem."'
                 name="Kathryn Murphy"
                 company="MC Donalds"
-                iconURL="/assets/client3.png"
+                iconURL="/client3.png"
               ></Testicard>
             </li>
           </ul>
@@ -267,8 +274,7 @@ export default function Home() {
           <p className="font-semibold text-2xl">Get in Touch</p>
           <p className="font-bold text-4xl mt-[20px]">Contact Me</p>
           <p className="font-normal text-xl mt-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-            quidem!
+            Please kindly completing this form 
           </p>
         </div>
 

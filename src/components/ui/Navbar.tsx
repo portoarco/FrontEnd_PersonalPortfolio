@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 import Image from "next/image";
 
 // max-lg:flex-col   max-lg:items-center
@@ -9,10 +9,10 @@ function Navbar() {
       {/* Normal Navbar */}
       <nav
         id="navbar"
-        className=" p-6 flex justify-between items-center shadow-xl fixed bg-white w-full "
+        className=" p-6 flex justify-between items-center shadow-xl fixed bg-white w-full z-10 "
       >
         <div id="navbar-logo" className="">
-          <Image src="/assets/logo.png" alt="logo" width={180} height={20}></Image>
+          <Image src="/logo.png" alt="logo" width={180} height={20}></Image>
         </div>
         <div id="navbar-menu" className="">
           <ul className="flex justify-between text-xl gap-10  ">
